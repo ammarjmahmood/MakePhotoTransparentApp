@@ -1,36 +1,31 @@
-# Transparent Screenshot
+# Make Photo Transparent
 
-A cross-platform tool for taking screenshots with automatic background removal capabilities.
+A cross-platform desktop application for removing backgrounds from images using AI. This project combines the power of [backgroundremover](https://github.com/nadermx/backgroundremover) with a user-friendly desktop interface.
 
 ## Features
 
-- Take full-screen or area-selected screenshots
-- AI-powered background removal
-- System tray integration
-- Global keyboard shortcuts
-- Save screenshots to a designated folder
-- Cross-platform support (macOS and Windows)
+* Easy-to-use desktop interface for removing image backgrounds
+* AI-powered background removal using U2Net model
+* Drag and drop interface for images
+* Batch processing support
+* Cross-platform support (macOS and Windows)
+* Preview of results before saving
+* Export to PNG with transparency
 
 ## Installation
 
-### Windows
+### Prerequisites
 
-#### Option 1: Using the Installer (Recommended)
-1. Download the latest `BackgroundRemover_Setup.exe` from the [Releases](https://github.com/ammarmahmood1999/transparentscreenshot/releases) page
-2. Run the installer and follow the installation wizard
-3. The application will be installed and shortcuts will be created in the Start Menu
-4. Launch the application from the Start Menu or desktop shortcut
-
-#### Option 2: Standalone Executable
-1. Download `transparent_bg.exe` from the [Releases](https://github.com/ammarmahmood1999/transparentscreenshot/releases) page
-2. Run the executable directly (no installation required)
+* Python 3.8 or higher
+* 2GB RAM minimum (4GB recommended)
+* 500MB disk space
 
 ### macOS
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/ammarmahmood1999/transparentscreenshot.git
-cd transparentscreenshot
+git clone https://github.com/ammarjmahmood/MakePhotoTransparent.git
+cd MakePhotoTransparent
 ```
 
 2. Create a virtual environment and install dependencies:
@@ -40,41 +35,23 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-3. Generate the app icon:
-```bash
-python create_icon.py
-```
-
-4. Run the application:
+3. Run the application:
 ```bash
 python transparent_bg_app.py
 ```
 
-## Usage
-
 ### Windows
-1. After installation, the app will run in the system tray
-2. Right-click the tray icon to:
-   - Take a full-screen screenshot (or press Win+Shift+4)
-   - Take an area screenshot (or press Win+Shift+5)
-   - Access settings
-   - Exit the application
-3. Screenshots are saved to your Pictures folder by default
-4. Right-click any saved screenshot to remove its background
 
-### macOS
-1. The app runs in the menu bar
-2. Use Command+Shift+4 for full-screen screenshots
-3. Use Command+Shift+5 for area selection
-4. Screenshots are saved to your Desktop by default
-5. Right-click any saved screenshot to remove its background
+#### Option 1: Using the Installer (Recommended)
+1. Download the latest release from the Releases page
+2. Run the installer and follow the installation wizard
+3. Launch the application from the Start Menu or desktop shortcut
 
-## Building from Source (Windows)
-
+#### Option 2: From Source
 1. Clone the repository:
 ```bash
-git clone https://github.com/ammarmahmood1999/transparentscreenshot.git
-cd transparentscreenshot
+git clone https://github.com/ammarjmahmood/MakePhotoTransparent.git
+cd MakePhotoTransparent
 ```
 
 2. Create a virtual environment and install dependencies:
@@ -84,22 +61,51 @@ python -m venv venv
 pip install -r requirements.txt
 ```
 
-3. Run the build script:
+3. Run the application:
+```bash
+python transparent_bg_app.py
+```
+
+## Usage
+
+1. Launch the application
+2. Drag and drop images onto the application window
+3. Click "Remove Background" to process the image
+4. Preview the result
+5. Save the processed image with a transparent background
+
+## Building from Source
+
+### macOS
+```bash
+python build.py
+```
+
+### Windows
 ```bash
 .\windows_build.bat
 ```
 
-This will create:
-- Standalone executable at: `dist\transparent_bg.exe`
-- Installer at: `installer\BackgroundRemover_Setup.exe`
+## Credits
 
-## Requirements
+This project builds upon the following open-source projects:
 
-- Python 3.8 or higher
-- Windows 10/11 or macOS 10.15+
-- 2GB RAM minimum (4GB recommended)
-- 500MB disk space
+* [backgroundremover](https://github.com/nadermx/backgroundremover) by Johnathan Nader - Core background removal functionality
+* [U-2-Net](https://github.com/NathanUA/U-2-Net) - Deep learning model for salient object detection
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## Acknowledgments
+
+* Thanks to the [backgroundremover](https://github.com/nadermx/backgroundremover) team for their excellent base library
+* Thanks to the U-2-Net team for their amazing AI model
