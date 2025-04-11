@@ -1,0 +1,17 @@
+# Requirements File for TransparentBG
+
+# Core
+PyQt5>=5.15.0
+numpy>=1.19.0
+opencv-python>=4.5.0
+onnxruntime>=1.8.0
+Pillow>=8.0.0
+requests>=2.25.0
+
+# Screenshot & Keyboard Functionality
+pyautogui>=0.9.53
+keyboard>=0.13.5
+pynput>=1.7.4
+
+# Optional
+pyinstaller>=5.0.0  # For app bundling
